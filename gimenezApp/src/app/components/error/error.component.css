@@ -1,0 +1,14 @@
+.container{
+    align-items: center;
+}
+p{
+    font-weight: normal;
+}
+
+h4{
+    text-align: center;
+}
+
+app-button{
+    margin-top: 5px;
+}
