@@ -1,0 +1,171 @@
+body{
+    background-color: bisque;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+.row{
+    max-width: 99%;
+    margin-left: 7px;
+}
+
+.img-thumbnail{
+    border: none;
+}
+
+#header,#ap, #li, #fc,#gh,#lk{
+    background-color: #00a78e;
+}
+
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+#ap{
+    height: 75px;
+    width: 120px;
+}
+
+#li{
+    height: 75px;
+    width: 200px;
+}
+
+#fc,#gh,#lk{
+    width: 68px;
+    height: 70px;
+}
+
+#fc,#gh,#lk,.btn{
+    margin-right: 0.5rem;
+}
+
+#verde{
+    width: 99%;
+    height: 400px;
+    padding-top: 0;
+    margin-left: 6px;
+    background-color: bisque;
+    border-radius: 20px;
+}
+
+#gim{
+    
+    margin-left: 8%;
+    width: 160px;
+    border-radius: 100%;
+    margin-top: -95px;
+}
+
+
+
+li{
+    list-style: none;
+}
+
+#desa,#lunaj,.card{
+    background-color: bisque;
+  
+}
+
+#desa{
+    width: 180px;
+    height: 65px;
+
+}
+
+#lunaj{
+    width: 80px;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#lts{
+    width: 80px;
+    height: 70px;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+
+h3{
+    margin-top: 25px;
+}
+
+#colunaj,#desa{
+    text-align: right;
+}
+
+#titacer{
+    font-weight: bold;
+}
+
+#h4edu,#h3edu,#h2edu{
+    display: inline;
+}
+
+.card{
+    border-style: none;
+}
+
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+  }
+
+p{
+    margin-bottom: 0;
+}  
+  /*progress bar configuración*/
+
+  .badge{
+
+	font-size: 25px;
+	font-weight: 200;
+}
+
+.badge i {
+
+	font-size: 20px;
+	font-weight: 200;
+}
+
+.about-rating{
+
+	font-size: 15px;
+	font-weight: 500;
+	margin-top: 10px;
+}
+
+.total-ratings{
+
+	font-size: 12px;
+
+}
+
+.bg-custom{
+
+	background-color: #b7dd29 !important;
+}
+
+.progress{
+
+	margin-bottom:10px;
+
+}
+
+.progress-bar{
+    color: black;
+    font-weight: bold;
+}
+
+/*--------------*/
+#calcu{
+    width: 80px;
+    height: 70px;
+}
