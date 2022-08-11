@@ -1,3 +1,4 @@
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -14,6 +15,8 @@ import { ErrorComponent } from './components/error/error.component';
 import { ProyectComponent } from './components/proyect/proyect.component';
 import { SkillComponent } from './components/skill/skill.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,10 +30,12 @@ import { SkillComponent } from './components/skill/skill.component';
     ErrorComponent,
     ProyectComponent,
     SkillComponent
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
