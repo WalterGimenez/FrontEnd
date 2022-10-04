@@ -82,11 +82,16 @@ li{
 
 }
 
-#lunaj{
+#lunaj, #Mid{
     width: 80px;
     height: 80px;
     margin-left: auto;
     margin-right: auto;
+}
+
+#Mid{
+    margin-top: 15px;
+    height: 50px;
 }
 
 #lts{
@@ -100,6 +105,8 @@ li{
 h3{
     margin-top: 25px;
 }
+
+
 
 #colunaj,#desa{
     text-align: right;
