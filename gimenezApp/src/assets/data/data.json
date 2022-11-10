@@ -44,11 +44,11 @@
         "description": "• Ingeniería en Informática, 2º Año"
     },
     {
-        "name": "Nuestra Señora del Perpetuo Socorro",
-        "img": "./assets/secundario.png",
-        "start":"2001",
-        "end": "2009",
-        "description": "• Perito Mercantil"
+        "name": ">Cultural Inglesa Midlands",
+        "img": "./assets/Midlands.png",
+        "start":"2022",
+        "end": "Actualidad",
+        "description": "• Estudiante de 1º Año"
     }],
     "skills":[{
         "percent": 85,
