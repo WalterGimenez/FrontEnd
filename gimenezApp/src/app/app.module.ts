@@ -14,6 +14,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ErrorComponent } from './components/error/error.component';
 import { ProyectComponent } from './components/proyect/proyect.component';
 import { SkillComponent } from './components/skill/skill.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -35,6 +36,7 @@ import { SkillComponent } from './components/skill/skill.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     NgbModule
   ],
   providers: [],
