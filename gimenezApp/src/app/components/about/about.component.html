@@ -5,10 +5,11 @@
   <div class="col-sm-2 col-md-2 col-lg-2">
     <img src="./assets/gimenez.png" class="img-fluid" alt="foto Gimenez" id="gim">
   </div>
+<!--Modal Foto -->
   <div class="col-sm-1 col-md-1 col-lg-1" id="pencil">
-    <i class="bi bi-pencil-fill"  width="75" height="75"></i>
+    <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal-foto" id="pencil-pencil"><i class="bi bi-pencil-fill"></i></button>
   </div>
-</div>
+
 
 <div class="row">
       <div class="col-sm-3 col-md-3 col-lg-3">
@@ -44,3 +45,26 @@
         </div>
 </div>
 
+
+<!-- Modal-Foto--> 
+
+<div class="modal fade" id="modal-foto" tabindex="-1" aria-labelledby="ejemploCambioFoto" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Cambio de Foto</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="recipient-link" class="col-form-label">Introduzca el link</label>
+          <input type="text" class="form-control" id="text-link-foto" placeholder="https://(link de donde se aloja la foto)">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary btn-sm">Grabar cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
