@@ -22,10 +22,100 @@
           <img src="./assets/facebook.png" class="img-responsive" alt="logo Facebook" id="fc">
         </a>
       </div>
+
+      <!-- Button trigger modal -->
       <div class="col-sm-auto col-md-auto col-lg-auto" id="others-btn">
-        <app-button  text="Login"></app-button>
+        <app-button  text="Login" class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#loginModal"></app-button>
       </div>
+
+
+
+
+
+
+
+
+
+
+
+     
       <div class="col-sm-auto col-md-auto col-lg-auto" id="others-btn">
-        <app-button  text="LogOut"></app-button>
+        <app-button  text="LogOut" class="btn btn-light btn-sm"></app-button>
       </div>
   </div>
+
+  <!-- Modal login-->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog"> 
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title  w-80 text-center" id="label">Login</h1>
+        
+        
+        
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Usuario</label>
+            <input type="email" class="form-control" id="email" placeholder="email@ejemplo.com">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Contraseña</label>
+            <input type="password" class="form-control" id="password" placeholder="contraseña">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <app-button text = "Cancelar" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal"></app-button>
+        <app-button text = "Logearse" class="btn btn-secondary btn-sm"></app-button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--
+<div class="bootstrap-wrapper">
+  <div class="alert alter-warning text-center"></div>
+  <div class="container mt">
+      <div class="row">
+          <div class="col-md-6 offset-md-3">
+              <div class="container text-center">
+                  <img src="./../assets/password.jpg" alt="icon security" class="img-fluid">
+              </div>
+              <h1 class="text-center">Ingrese a su cuenta</h1>
+              <form class="custom-form text-center " method="post">
+                  <div class="form-group">
+                      <label for="username">Usuario</label>
+                      <input type="text" class="form-control" id="username" name="username"  placeholder="Ingrese usuario">
+                  </div>
+                  <div class="form-group">
+                      <label for="password">Contraseña</label>
+                      <input type="password" class="form-control" id="password" name="password"  placeholder="Ingrese contraseña">
+                  </div>
+                  <div>
+                  <button type="submit" class="btn btn-success" >Ingresar</button>
+                  <button type="submit" class="btn btn-success" >Cancelar</button>
+                  </div>
+              </form>    
+      </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog"> 
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div> -->
