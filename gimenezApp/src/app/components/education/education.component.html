@@ -3,13 +3,13 @@
     <h1>Educación</h1>
     </div>
     <div class="col-sm-1 col-md-1 col-lg-1" id="pencil4">
-      <i class="bi bi-pencil-fill"  width="75" height="75"></i>
+      <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal-Educa" id="pencil-pencil"><i class="bi bi-pencil-fill"></i></button>
     </div>
     <div class="col-sm-1 col-md-1 col-lg-1" id="pencil4">
-      <i class="bi bi-plus-lg"  width="75" height="75"></i>
+      <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal-Nueva-Educa" id="pencil-pencil"><i class="bi bi-plus-lg"  width="75" height="75"></i></button> 
     </div>
     <div class="col-sm-1 col-md-1 col-lg-1" id="pencil4">
-      <i class="bi bi-x-lg"  width="75" height="75"></i>
+      <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal-Educa-borra" id="pencil-pencil4"><i class="bi bi-x-lg"></i></button>
     </div>
     <div class="card">
       <div class="card-horizontal">
@@ -37,4 +37,99 @@
         </div>
       </div>
     </div>
+</div>
+
+<!-- Modal-Educación--> 
+
+<div class="modal fade" id="modal-Educa" tabindex="-1" aria-labelledby="modalEduca" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modalLabel">Editar Educación</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="recipient-link" class="col-form-label">Introduzca el link</label>
+          <input type="text" class="form-control" id="text-link-foto" placeholder="https://(link de donde se aloja la foto)">
+        </div>
+        <div class="mb-3">
+          <label for="recipient-link" class="col-form-label">Introduzca Institución</label>
+          <input type="text" class="form-control" id="text-link-foto" placeholder="Nombre Institución">
+        </div>
+        <div class="mb-3">
+          <label for="recipient-link" class="col-form-label">Introduzca Año</label>
+          <input type="text" class="form-control" id="text-link-foto" placeholder="Desde/Hasta">
+        </div>
+        <div class="mb-3">
+          <label for="recipient-link" class="col-form-label">Introduzca título</label>
+          <input type="text" class="form-control" id="text-link-foto" placeholder="Título">
+        </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary btn-sm">Grabar cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal-Educación-Nueva--> 
+
+<div class="modal fade" id="modal-Nueva-Educa" tabindex="-1" aria-labelledby="modalNuevaEduca" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modalLabel">Nueva Educación</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="recipient-link" class="col-form-label">Introduzca el link</label>
+          <input type="text" class="form-control" id="text-link-foto" placeholder="https://(link de donde se aloja la foto)">
+        </div>
+        <div class="mb-3">
+          <label for="recipient-link" class="col-form-label">Introduzca Institución</label>
+          <input type="text" class="form-control" id="text-link-foto" placeholder="Nombre Institución">
+        </div>
+        <div class="mb-3">
+          <label for="recipient-link" class="col-form-label">Introduzca Año</label>
+          <input type="text" class="form-control" id="text-link-foto" placeholder="Desde/Hasta">
+        </div>
+        <div class="mb-3">
+          <label for="recipient-link" class="col-form-label">Introduzca título</label>
+          <input type="text" class="form-control" id="text-link-foto" placeholder="Título">
+        </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary btn-sm">Grabar cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal-Educa-Borrar--> 
+
+<div class="modal fade" id="modal-Educa-borra" tabindex="-1" aria-labelledby="general" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modalLabel">Borrar Educación</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="recipient-link" class="col-form-label">¿Está seguro de borrar el ítem Educación?</label>
+          
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary btn-sm">Borrar</button>
+      </div>
+    </div>
+  </div>
 </div>
