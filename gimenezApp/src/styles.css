@@ -73,7 +73,6 @@ li{
 
 #desa,#lunaj,.card{
     background-color: bisque;
-  
 }
 
 #desa{
@@ -127,14 +126,14 @@ h3{
 .card-horizontal {
     display: flex;
     flex: 1 1 auto;
-  }
+}
 
 p{
     margin-bottom: 0;
 }  
-  /*progress bar configuración*/
+/*progress bar configuración*/
 
-  .badge{
+.badge{
 
 	font-size: 25px;
 	font-weight: 200;
@@ -179,4 +178,10 @@ p{
 #calcu{
     width: 80px;
     height: 70px;
+}
+
+/*----Modal---*/
+#pencil-pencil, #pencil-pencil2, #pencil-pencil3, #pencil-pencil4{
+    background-color: bisque;
+    border-color: bisque;
 }

@@ -3,26 +3,110 @@
     <h1>Proyectos</h1>
     </div>
     <div class="col-sm-1 col-md-1 col-lg-1" id="pencil4">
-      <i class="bi bi-pencil-fill"  width="75" height="75"></i>
+      <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal-Proyect" id="pencil-pencil"><i class="bi bi-pencil-fill"></i></button>
     </div>
     <div class="col-sm-1 col-md-1 col-lg-1" id="pencil4">
-      <i class="bi bi-plus-lg"  width="75" height="75"></i>
+      <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal-Nuevo-Proyect" id="pencil-pencil"><i class="bi bi-plus-lg"  width="75" height="75"></i></button> 
     </div>
     <div class="col-sm-1 col-md-1 col-lg-1" id="pencil4">
-      <i class="bi bi-x-lg"  width="75" height="75"></i>
+      <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal-Proyect-borra" id="pencil-pencil4"><i class="bi bi-x-lg"></i></button>
     </div>
     <div class="card">
       <div class="card-horizontal">
           <div class="img-square-wrapper">
             <a href="https://github.com/WalterGimenez/calculadoraApp" target="_blank"><img src="./assets/calcu.png" alt="foto calculadora" id="calcu"></a>
           </div>
-         <div class="card-body">
-                <h3 class="card-title" id="h4edu">Mini Calculadora</h3>
-                
-                <p class="card-text">Calculadora simple de suma y resta hecha con Angular</p>
-                
-         </div>
-         
+          <div class="card-body">
+            <h3 class="card-title" id="h4edu">Mini Calculadora</h3>
+              <p class="card-text">Calculadora simple de suma y resta hecha con Angular</p>
+          </div>
       </div>
     </div>
+</div>
+
+<!-- Modal-Proyecto--> 
+
+<div class="modal fade" id="modal-Proyect" tabindex="-1" aria-labelledby="modalProy" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modalLabel">Editar Proyecto</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="recipient-link" class="col-form-label">Introduzca el link</label>
+          <input type="text" class="form-control" id="text-link-educa" placeholder="https://(link de donde se aloja la foto)">
+        </div>
+        <div class="mb-3">
+          <label for="recipient-link" class="col-form-label">Introduzca</label>
+          <input type="text" class="form-control" id="text-intitucion" placeholder="Nombre Proyecto">
+        </div>
+        <div class="mb-3">
+          <label for="recipient-link" class="col-form-label">Introduzca</label>
+          <input type="text" class="form-control" id="text-titulo" placeholder="Comentario de que se trata">
+        </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary btn-sm">Grabar cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal-Proyecto-Nuevo--> 
+
+<div class="modal fade" id="modal-Nuevo-Proyect" tabindex="-1" aria-labelledby="modalNuevaProy" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modalLabel">Nuevo Proyecto</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="recipient-link" class="col-form-label">Introduzca el link</label>
+          <input type="text" class="form-control" id="text-link-educa" placeholder="https://(link de donde se aloja la foto)">
+        </div>
+        <div class="mb-3">
+          <label for="recipient-link" class="col-form-label">Introduzca</label>
+          <input type="text" class="form-control" id="text-intitucion" placeholder="Nombre Proyecto">
+        </div>
+        <div class="mb-3">
+          <label for="recipient-link" class="col-form-label">Introduzca</label>
+          <input type="text" class="form-control" id="text-titulo" placeholder="Comentario de que se trata">
+        </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary btn-sm">Grabar cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal-Proyecto-Borrar--> 
+
+<div class="modal fade" id="modal-Proyect-borra" tabindex="-1" aria-labelledby="general" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modalLabel">Borrar Proyecto</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="recipient-link" class="col-form-label">¿Está seguro de borrar el ítem Proyecto?</label>
+          
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary btn-sm">Borrar</button>
+      </div>
+    </div>
+  </div>
 </div>
