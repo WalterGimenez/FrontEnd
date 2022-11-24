@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-header',
@@ -6,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+form: FormGroup;
+  constructor(private formBuilder: FormBuilder ) {
+    this.form = this.formBuilder.group(
+      {
 
-  constructor() { }
-
+      }
+    )
+    }
   ngOnInit(): void {
   }
 

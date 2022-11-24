@@ -15,6 +15,7 @@ import { ErrorComponent } from './components/error/error.component';
 import { ProyectComponent } from './components/proyect/proyect.component';
 import { SkillComponent } from './components/skill/skill.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -37,7 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
