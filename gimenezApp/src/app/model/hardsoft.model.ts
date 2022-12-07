@@ -1,9 +1,9 @@
 export class hardsoft{
     id?: number;
-    name: String;
+    name: string;
     perc: number;
 
-    constructor(name: String, perc: number){
+    constructor(name: string, perc: number){
         this.name = name;
         this.perc = perc;
     }

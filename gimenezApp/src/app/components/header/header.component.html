@@ -31,14 +31,6 @@
 
 
 
-
-
-
-
-
-
-
-     
       <div class="col-sm-auto col-md-auto col-lg-auto" id="others-btn">
         <app-button  text="LogOut" class="btn btn-light btn-sm"></app-button>
       </div>
@@ -49,27 +41,29 @@
   <div class="modal-dialog"> 
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title  w-80 text-center" id="label">Login</h1>
-        
-        
-        
+        <h1 class="modal-title  w-80 text-center" id="label">Login</h1> 
       </div>
       <div class="modal-body">
-        <form>
+        <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+          
+
           <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Usuario</label>
-            <input type="email" class="form-control" id="email" placeholder="email@ejemplo.com">
+            <label class="col-form-label">Usuario</label>
+            <input type="text" class="form-control" id="userName"  placeholder="Nombre de Usuario" [(ngModel)]="userName" name="userName" required>
           </div>
           <div class="mb-3">
-            <label for="message-text" class="col-form-label">Contraseña</label>
-            <input type="password" class="form-control" id="password" placeholder="contraseña">
+            <label class="col-form-label">Contraseña</label>
+            <input type="password" class="form-control" id="password"  placeholder="contraseña"[ngModel]="password" name="password" required>
+          </div>
+
+          <div class="modal-footer">
+            <!--<app-button text = "Cancelar" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal"></app-button>-->
+            <button class="btn btn-primary btn-sm" type="submit">Loguearse</button>
+            <!--<app-button text = "Logearse" class="btn btn-primary btn-sm" type="submit"></app-button>-->
           </div>
         </form>
       </div>
-      <div class="modal-footer">
-        <app-button text = "Cancelar" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal"></app-button>
-        <app-button text = "Logearse" class="btn btn-primary btn-sm"></app-button>
-      </div>
+      
     </div>
   </div>
 </div>

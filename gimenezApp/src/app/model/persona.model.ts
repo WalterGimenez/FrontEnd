@@ -1,16 +1,16 @@
 export class persona{
     id? : number;
-    name : String;
-    lastname : String;
-    about1 : String;
-    about2 : String;
-    tit1 : String;
-    tit2 : String;
-    banner : String;
-    link : String;
+    name : string;
+    lastname : string;
+    about1 : string;
+    about2 : string;
+    tit1 : string;
+    tit2 : string;
+    banner : string;
+    link : string;
 
 
-    constructor(name: String, lastname: String, about1: String, about2: String, tit1: String, tit2: String, banner: String, link : String){
+    constructor(name: string, lastname: string, about1: string, about2: string, tit1: string, tit2: string, banner: string, link : string){
         this.name = name;
         this.lastname = lastname;
         this.about1 = about1;
