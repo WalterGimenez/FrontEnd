@@ -1,12 +1,12 @@
 export class proyects{
     id?: number;
-    link: String;
-    name: String;
-    descrip: String;
-    linkproy: String;
+    link: string;
+    name: string;
+    descrip: string;
+    linkproy: string;
 
 
-    constructor(link: String, name: String, descrip: String, linkproy: String){
+    constructor(link: string, name: string, descrip: string, linkproy: string){
         this.link = link;
         this.name = name;
         this.descrip = descrip;

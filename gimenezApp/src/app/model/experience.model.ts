@@ -1,12 +1,12 @@
 export class experience{
     id?: number;
-    name: String;
-    startend: String;
-    link: String;
-    job: String;
-    descrip: String;
+    name: string;
+    startend: string;
+    link: string;
+    job: string;
+    descrip: string;
 
-    constructor(name: String, startend: String, link: String, job: String, descrip: String){
+    constructor(name: string, startend: string, link: string, job: string, descrip: string){
         this.name = name;
         this.startend = startend;
         this.link = link;

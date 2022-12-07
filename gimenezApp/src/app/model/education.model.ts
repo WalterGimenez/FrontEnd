@@ -1,12 +1,12 @@
 export class education{
     id?: number;
-    name: String;
-    startend: String;
-    descrip: String;
-    link: String;
+    name: string;
+    startend: string;
+    descrip: string;
+    link: string;
     
 
-    constructor(name: String, startend: String, descrip: String, link: String){
+    constructor(name: string, startend: string, descrip: string, link: string){
         this.name = name;
         this.startend = startend;
         this.descrip = descrip;
