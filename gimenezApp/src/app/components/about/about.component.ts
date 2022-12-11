@@ -1,3 +1,4 @@
+import { TokenService } from './../../service/token.service';
 import { Component, OnInit } from '@angular/core';
 import { persona } from 'src/app/model/persona.model';
 import { PersonaService } from 'src/app/service/persona.service';
@@ -10,7 +11,7 @@ import { PersonaService } from 'src/app/service/persona.service';
 export class AboutComponent implements OnInit {
   persona: persona = new persona("","","","","","","","");
 
-  constructor(public personaService : PersonaService) { }
+  constructor(public personaService : PersonaService, private tokenService : TokenService) { }
 
   ngOnInit(): void {
     this.personaService.getPersona().subscribe(data => {this.persona = data})

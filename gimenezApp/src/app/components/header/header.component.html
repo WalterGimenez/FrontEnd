@@ -25,14 +25,14 @@
 
       <!-- Button trigger modal -->
       <div class="col-sm-auto col-md-auto col-lg-auto" id="others-btn">
-        <app-button  text="Login" class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#loginModal"></app-button>
+        <app-button  text="Login" class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#loginModal" *ngIf="!isLogged"></app-button>
       </div>
 
 
 
 
       <div class="col-sm-auto col-md-auto col-lg-auto" id="others-btn">
-        <app-button  text="LogOut" class="btn btn-light btn-sm"></app-button>
+        <app-button  text="LogOut" class="btn btn-light btn-sm" (click)="onLogOut()" *ngIf="isLogged"  ></app-button>
       </div>
   </div>
 
@@ -53,12 +53,12 @@
           </div>
           <div class="mb-3">
             <label class="col-form-label">Contraseña</label>
-            <input type="password" class="form-control" id="password"  placeholder="contraseña"[ngModel]="password" name="password" required>
+            <input type="password" class="form-control" id="password"  placeholder="contraseña"[(ngModel)]="password" name="password" required>
           </div>
 
           <div class="modal-footer">
             <!--<app-button text = "Cancelar" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal"></app-button>-->
-            <button class="btn btn-primary btn-sm" type="submit">Loguearse</button>
+            <button class="btn btn-light btn-sm"  type="submit">Loguearse</button>
             <!--<app-button text = "Logearse" class="btn btn-primary btn-sm" type="submit"></app-button>-->
           </div>
         </form>
