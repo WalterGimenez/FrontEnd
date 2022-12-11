@@ -37,7 +37,8 @@ export class HeaderComponent implements OnInit {
       this.tokenService.setToken(data.token);
       this.tokenService.setUserName(data.userName);
       this.tokenService.setAuthorities(data.authorities);
-      this.router.navigate(['/']);
+      this.router.navigateByUrl("/");
+      
     }, err =>{
       this.isLogged = false;
       this.isLogginFail = true;
@@ -45,4 +46,8 @@ export class HeaderComponent implements OnInit {
     });
   }
 
+  onLogOut(): void{
+    this.tokenService.logOut();
+    window.location.reload();
+  }
 }
