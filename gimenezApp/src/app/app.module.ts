@@ -17,6 +17,8 @@ import { ProyectComponent } from './components/proyect/proyect.component';
 import { SkillComponent } from './components/skill/skill.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { interceptorProvider } from './service/interceptor-service';
+
 
 
 
@@ -32,7 +34,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     ErrorComponent,
     ProyectComponent,
-    SkillComponent
+    SkillComponent,
+   
     
   ],
   imports: [
@@ -43,7 +46,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [LoggedService],
+  providers: [LoggedService,interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
