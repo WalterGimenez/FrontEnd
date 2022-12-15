@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoggedService } from 'src/app/service/logged.service';
 
 @Component({
   selector: 'app-experience',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./experience.component.css']
 })
 export class ExperienceComponent implements OnInit {
+  isLoggedIn = false;
 
-  constructor() { }
+  constructor(private logginService : LoggedService) { }
 
   ngOnInit(): void {
+   
+    this.logginService.login$.subscribe((loginState => {
+    this.isLoggedIn = loginState;}))
   }
+
 
 }

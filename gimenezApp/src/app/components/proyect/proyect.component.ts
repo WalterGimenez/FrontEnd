@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoggedService } from 'src/app/service/logged.service';
 
 @Component({
   selector: 'app-proyect',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./proyect.component.css']
 })
 export class ProyectComponent implements OnInit {
+  isLoggedIn = false;
 
-  constructor() { }
+  constructor(private logginService : LoggedService) { }
+
 
   ngOnInit(): void {
+   
+    this.logginService.login$.subscribe((loginState => {
+    this.isLoggedIn = loginState;}))
   }
+
 
 }
