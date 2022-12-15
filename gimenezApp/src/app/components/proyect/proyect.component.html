@@ -3,13 +3,13 @@
     <h1>Proyectos</h1>
     </div>
     <div class="col-sm-1 col-md-1 col-lg-1" id="pencil4">
-      <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal-Proyect" id="pencil-pencil"><i class="bi bi-pencil-fill"></i></button>
+      <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal-Proyect" id="pencil-pencil" *ngIf="isLoggedIn"><i class="bi bi-pencil-fill"></i></button>
     </div>
     <div class="col-sm-1 col-md-1 col-lg-1" id="pencil4">
-      <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal-Nuevo-Proyect" id="pencil-pencil"><i class="bi bi-plus-lg"  width="75" height="75"></i></button> 
+      <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal-Nuevo-Proyect" id="pencil-pencil" *ngIf="isLoggedIn"><i class="bi bi-plus-lg"  width="75" height="75"></i></button> 
     </div>
     <div class="col-sm-1 col-md-1 col-lg-1" id="pencil4">
-      <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal-Proyect-borra" id="pencil-pencil4"><i class="bi bi-x-lg"></i></button>
+      <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal-Proyect-borra" id="pencil-pencil4" *ngIf="isLoggedIn"><i class="bi bi-x-lg"></i></button>
     </div>
     <div class="card">
       <div class="card-horizontal">

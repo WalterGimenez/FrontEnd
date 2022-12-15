@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoggedService } from 'src/app/service/logged.service';
 
 @Component({
   selector: 'app-skill',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillComponent implements OnInit {
 
-  constructor() { }
+  isLoggedIn = false;
+
+  constructor(private logginService : LoggedService) { }
+
 
   ngOnInit(): void {
+   
+    this.logginService.login$.subscribe((loginState => {
+    this.isLoggedIn = loginState;}))
   }
 
 }
