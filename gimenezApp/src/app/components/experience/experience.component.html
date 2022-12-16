@@ -11,6 +11,32 @@
       <div class="col-sm-1 col-md-1 col-lg-1" id="pencil4">
         <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal-Expe-borra" id="pencil-pencil4" *ngIf="isLoggedIn"><i class="bi bi-x-lg"></i></button>
       </div>
+      <ul>
+        <li *ngFor="let experience of experience">
+          <div class="card">
+            <div class="card-horizontal">
+              <div class="img-square-wrapper">
+                <a href="https://www.unaj.edu.ar/carreras/ingenieria-y-agronomia/ingenieria-informatica/" target="_blank"><img src="{{experience.link}}" alt="logo UNAJ" id="lunaj"></a>
+              </div>
+                        
+              <div class="card-body">
+                    <h4 class="card-title" id="h4edu">{{experience.name}}} <h3 id="h3edu">{{experience.startend}}</h3></h4>
+                    <h5>{{experience.job}}</h5>
+                    <p class="card-text">{{experience.descrip}}</p>
+              </div>
+          </div>
+      </div>
+        </li>
+      </ul>
+
+
+
+
+
+
+
+<!--
+
         <div class="card">
           <div class="card-horizontal">
             <div class="img-square-wrapper">
@@ -38,7 +64,7 @@
         <br>
           
       </div>
-</div>
+</div>-->
 </div>
 
 <!-- Modal-Experiencia--> 
