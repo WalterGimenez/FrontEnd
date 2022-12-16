@@ -11,20 +11,32 @@
     <div class="col-sm-1 col-md-1 col-lg-1" id="pencil4">
       <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal-Educa-borra" id="pencil-pencil4" *ngIf="isLoggedIn"><i class="bi bi-x-lg"></i></button>
     </div>
+    <ul>
+      <li *ngFor="let education of education">
+        <div class="card">
+          <div class="card-horizontal">
+            <div class="img-square-wrapper">
+              <a href="https://www.unaj.edu.ar/carreras/ingenieria-y-agronomia/ingenieria-informatica/" target="_blank"><img src="{{education.link}}" alt="logo UNAJ" id="lunaj"></a>
+            </div>
+                      
+            <div class="card-body">
+              <h2 id="h2edu">{{education.name}} {{education.startend}}</h2>
+              <p class="card-text">{{education.descrip}}</p>
+            
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
     
-    <div class="card">
-      <div class="card-horizontal">
-        <div class="img-square-wrapper">
-          <a href="https://www.unaj.edu.ar/carreras/ingenieria-y-agronomia/ingenieria-informatica/" target="_blank"><img src="./assets/logoUnaj.png" alt="logo UNAJ" id="lunaj"></a>
-        </div>
-                  
-        <div class="card-body">
-          <h2 id="h2edu">Universidad Nacional Arturo Jauretche 2015/Actualidad</h2>
-          <p class="card-text">• Ingeniería en Informática, 2º Año</p>
-        
-        </div>
-      </div>
-    </div>
+
+
+
+
+
+
+
+    <!--
     <div class="card">
       <div class="card-horizontal">
         <div class="img-square-wrapper">
@@ -38,7 +50,7 @@
         </div>
       </div>
     </div>
-</div>
+</div>-->
 
 <!-- Modal-Educación--> 
 
