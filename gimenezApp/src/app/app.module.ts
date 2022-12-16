@@ -35,7 +35,7 @@ import { interceptorProvider } from './service/interceptor-service';
     ErrorComponent,
     ProyectComponent,
     SkillComponent,
-   
+
     
   ],
   imports: [
