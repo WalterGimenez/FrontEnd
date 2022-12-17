@@ -11,17 +11,23 @@
     <div class="col-sm-1 col-md-1 col-lg-1" id="pencil4">
       <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal-Proyect-borra" id="pencil-pencil4" *ngIf="isLoggedIn"><i class="bi bi-x-lg"></i></button>
     </div>
-    <div class="card">
-      <div class="card-horizontal">
-          <div class="img-square-wrapper">
-            <a href="https://github.com/WalterGimenez/calculadoraApp" target="_blank"><img src="./assets/calcu.png" alt="foto calculadora" id="calcu"></a>
+
+    <ul>
+      <li *ngFor="let proyect of proyect">
+        <div class="card">
+          <div class="card-horizontal">
+              <div class="img-square-wrapper">
+                <a href="{{proyect.linkproy}}" target="_blank"><img src="{{proyect.link}}" alt="foto calculadora" id="calcu"></a>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title" id="h4edu">{{proyect.name}}</h3>
+                  <p class="card-text">{{proyect.descrip}}</p>
+              </div>
           </div>
-          <div class="card-body">
-            <h3 class="card-title" id="h4edu">Mini Calculadora</h3>
-              <p class="card-text">Calculadora simple de suma y resta hecha con Angular</p>
-          </div>
-      </div>
-    </div>
+        </div>
+      </li>
+    </ul>
+    
 </div>
 
 <!-- Modal-Proyecto--> 
