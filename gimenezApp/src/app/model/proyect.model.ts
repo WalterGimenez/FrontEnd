@@ -1,4 +1,4 @@
-export class proyects{
+export class proyect{
     id?: number;
     link: string;
     name: string;

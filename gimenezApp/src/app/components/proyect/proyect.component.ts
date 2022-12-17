@@ -1,3 +1,5 @@
+import { ProyectService } from './../../service/proyect.service';
+import { proyect } from './../../model/proyect.model';
 import { Component, OnInit } from '@angular/core';
 import { LoggedService } from 'src/app/service/logged.service';
 
@@ -8,15 +10,21 @@ import { LoggedService } from 'src/app/service/logged.service';
 })
 export class ProyectComponent implements OnInit {
   isLoggedIn = false;
+  proyect : proyect [] = [];
 
-  constructor(private logginService : LoggedService) { }
+  constructor(private logginService : LoggedService, private serviceProyect : ProyectService) { }
 
 
   ngOnInit(): void {
-   
+    this.loadProyect();
     this.logginService.login$.subscribe((loginState => {
     this.isLoggedIn = loginState;}))
   }
 
 
+  loadProyect(): void{
+    this.serviceProyect.list().subscribe(
+      data => { this.proyect = data; }
+    )
+  }
 }
