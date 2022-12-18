@@ -36,7 +36,40 @@
 <div class="modal fade" id="modal-Educa" tabindex="-1" aria-labelledby="modalEduca" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
+
+      <ul>
+        <li *ngFor="let education of education">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modalLabel">Editar Educación</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="recipient-link" class="col-form-label">Introduzca url</label>
+              <input type="url" class="form-control" id="text-link-educa" placeholder="{{education.link}}">
+            </div>
+            <div class="mb-3">
+              <label for="recipient-link" class="col-form-label">Introduzca Institución</label>
+              <input type="text" class="form-control" id="text-intitucion" placeholder="{{education.name}}">
+            </div>
+            <div class="mb-3">
+              <label for="recipient-link" class="col-form-label">Introduzca Año/Hasta</label>
+              <input type="text" class="form-control" id="text-anio" placeholder="{{education.startend}}">
+            </div>
+            <div class="mb-3">
+              <label for="recipient-link" class="col-form-label">Introduzca título</label>
+              <input type="text" class="form-control" id="text-titulo" placeholder="{{education.descrip}}">
+            </div>
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary btn-sm">Grabar cambios</button>
+          </div>
+        </li>
+      </ul>
+
+    <!--  <div class="modal-header">
         <h1 class="modal-title fs-5" id="modalLabel">Editar Educación</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
@@ -62,7 +95,9 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal">Cancelar</button>
         <button type="button" class="btn btn-primary btn-sm">Grabar cambios</button>
-      </div>
+      </div>-->
+
+
     </div>
   </div>
 </div>

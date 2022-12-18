@@ -61,6 +61,8 @@
             <button class="btn btn-light btn-sm btnLogin"  type="submit">Loguearse</button>
             <!--<app-button text = "Logearse" class="btn btn-primary btn-sm" type="submit"></app-button>-->
           </div>
+          <p *ngIf="!isLogged" > No es un usurio correcto</p>
+          <p *ngIf="isLogged" ></p>
         </form>
       </div>
       

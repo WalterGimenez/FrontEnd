@@ -26,4 +26,17 @@ export class EducationComponent implements OnInit {
     )
   }
 
+  
+
+  delet(id?: number){
+    if(id !=undefined){
+      this.serviceEducation.delete(id).subscribe(
+        data => { this.loadEducation();
+        }, err =>{
+          alert("No se eliminó")
+        }
+        
+      )
+    }
+  }
 }

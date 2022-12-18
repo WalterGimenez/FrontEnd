@@ -19,6 +19,7 @@ export class HeaderComponent implements OnInit {
   password : string;
   roles: string[] = [];
   errorMessage : string;
+  first = true;
   public loginTrue : boolean;
 
 
@@ -50,6 +51,7 @@ export class HeaderComponent implements OnInit {
       this.isLogginFail = true;
       this.errorMessage = err.error.mensaje;
       this.logginService.setIsLoggedNow(false);
+      this.first = false;
     });
     
     
