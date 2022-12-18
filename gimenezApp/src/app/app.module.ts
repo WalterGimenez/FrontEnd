@@ -18,6 +18,7 @@ import { SkillComponent } from './components/skill/skill.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { interceptorProvider } from './service/interceptor-service';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -44,7 +45,8 @@ import { interceptorProvider } from './service/interceptor-service';
     HttpClientModule,
     NgbModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    CommonModule
   ],
   providers: [LoggedService,interceptorProvider],
   bootstrap: [AppComponent]
