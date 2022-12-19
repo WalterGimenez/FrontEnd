@@ -2,7 +2,6 @@ import { education } from './../../model/education.model';
 import { Component, OnInit } from '@angular/core';
 import { LoggedService } from 'src/app/service/logged.service';
 import { EducationService } from 'src/app/service/education.service';
-import { ExperienceComponent } from '../experience/experience.component';
 
 @Component({
   selector: 'app-education',
