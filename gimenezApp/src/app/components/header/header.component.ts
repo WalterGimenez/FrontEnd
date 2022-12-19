@@ -52,6 +52,7 @@ export class HeaderComponent implements OnInit {
       this.errorMessage = err.error.mensaje;
       this.logginService.setIsLoggedNow(false);
       this.first = false;
+      alert("no tien permisos como administrador");
     });
     
     

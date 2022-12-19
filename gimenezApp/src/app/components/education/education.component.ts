@@ -36,7 +36,9 @@ export class EducationComponent implements OnInit {
   create(): void{
     const newEdu = new education(this.linkNew,this.nameNew,this.startendNew,this.descripNew);
     this.serviceEducation.save(newEdu).subscribe(data => {
+      this.loadEducation();
       alert("Educación agregada");
+      
     },err =>{
       alert("No se pudo crear");
     }
