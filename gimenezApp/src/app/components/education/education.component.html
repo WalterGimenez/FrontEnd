@@ -44,6 +44,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
+          
             <div class="mb-3">
               <label for="recipient-link" class="col-form-label">Introduzca url</label>
               <input type="url" class="form-control" id="text-link-educa" placeholder="{{education.link}}">
@@ -108,10 +109,33 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="modalLabel">Nueva Educación</h1>
+        <h1 class="modal-title fs-5" id="modalLabel">Agregar Nueva Educación</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+        <form (ngSubmit)="create()" novalidate #f="ngForm">
+          <div class="form-group">
+            <label for="linkNew">Introduza url</label>
+            <input type="url" class="form-control" id="linkNew" name="linkNew" [(ngModel)] = "linkNew" required>
+          </div>
+          <div class="form-group">
+            <label for="linkNew">Introduza Institución</label>
+            <input type="text" class="form-control" id="nameNew" name="nameNew" [(ngModel)] = "nameNew" required>
+          </div>
+          <div class="form-group">
+            <label for="linkNew">Introduza Año/Hasta</label>
+            <input type="text" class="form-control" id="startendNew" name="startendNew" [(ngModel)] = "startendNew" required>
+          </div>
+          <div class="form-group">
+            <label for="linkNew">Introduza título</label>
+            <input type="text" class="form-control" id="descripNew" name="descripNew" [(ngModel)] = "descripNew" required>
+          </div>
+
+            <button type="button" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary btn-sm" (click)="create()">Guardar</button>
+          </form>
+
+        <!--
         <div class="mb-3">
           <label for="recipient-link" class="col-form-label">Introduzca url</label>
           <input type="url" class="form-control" id="text-link-educa" placeholder="url de la foto)">
@@ -128,12 +152,12 @@
           <label for="recipient-link" class="col-form-label">Introduzca título</label>
           <input type="text" class="form-control" id="text-titulo" placeholder="Título">
         </div>
-        
+       
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal">Cancelar</button>
         <button type="button" class="btn btn-primary btn-sm">Grabar cambios</button>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
@@ -141,6 +165,43 @@
 <!-- Modal-Educa-Borrar--> 
 
 <div class="modal fade" id="modal-Educa-borra" tabindex="-1" aria-labelledby="general" aria-hidden="true">
+
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <ul>
+        <li *ngFor="let education of education">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modalLabel">Editar Educación</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+          
+            <div class="mb-3">
+              <label for="recipient-link" class="col-form-label">Introduzca url</label>
+              <input type="url" class="form-control" id="text-link-educa" placeholder="{{education.link}}">
+            </div>
+            <div class="mb-3">
+              <label for="recipient-link" class="col-form-label">Introduzca Institución</label>
+              <input type="text" class="form-control" id="text-intitucion" placeholder="{{education.name}}">
+            </div>
+            <div class="mb-3">
+              <label for="recipient-link" class="col-form-label">Introduzca Año/Hasta</label>
+              <input type="text" class="form-control" id="text-anio" placeholder="{{education.startend}}">
+            </div>
+            <div class="mb-3">
+              <label for="recipient-link" class="col-form-label">Introduzca título</label>
+              <input type="text" class="form-control" id="text-titulo" placeholder="{{education.descrip}}">
+            </div>
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary btn-sm" (click)="delete(education.id)">Borrar</button>
+          </div>
+        </li>
+      </ul>
+
+  <!--
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -158,5 +219,5 @@
         <button type="button" class="btn btn-primary btn-sm">Borrar</button>
       </div>
     </div>
-  </div>
+  </div>-->
 </div>
