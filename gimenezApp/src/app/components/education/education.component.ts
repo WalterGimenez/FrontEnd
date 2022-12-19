@@ -2,6 +2,7 @@ import { education } from './../../model/education.model';
 import { Component, OnInit } from '@angular/core';
 import { LoggedService } from 'src/app/service/logged.service';
 import { EducationService } from 'src/app/service/education.service';
+import { ExperienceComponent } from '../experience/experience.component';
 
 @Component({
   selector: 'app-education',
@@ -10,7 +11,13 @@ import { EducationService } from 'src/app/service/education.service';
 })
 export class EducationComponent implements OnInit {
   isLoggedIn = false;
-  education : education [] = []; 
+  education : education [] = [] ;
+  educationEdit : education;
+  linkNew : string;
+  nameNew : string;
+  startendNew : string;
+  descripNew : string;
+  
 
   constructor(private logginService : LoggedService, private serviceEducation : EducationService) { }
 
@@ -26,9 +33,17 @@ export class EducationComponent implements OnInit {
     )
   }
 
-  
+  create(): void{
+    const newEdu = new education(this.linkNew,this.nameNew,this.startendNew,this.descripNew);
+    this.serviceEducation.save(newEdu).subscribe(data => {
+      alert("Educación agregada");
+    },err =>{
+      alert("No se pudo crear");
+    }
+    )
+  }
 
-  delet(id?: number){
+  delete(id?: number){
     if(id !=undefined){
       this.serviceEducation.delete(id).subscribe(
         data => { this.loadEducation();
