@@ -1,0 +1,28 @@
+<h2>Editar Educación</h2>
+<div class="container" *ngIf="education">
+
+    <div class="row">
+        <div>
+            <form (ngSubmit)="update()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="name">Introduza Institución</label>
+                    <input type="text" class="form-control" id="name" name="name" [(ngModel)]="education.name" placeholder="education.name" required>
+                </div>
+                <div class="form-group">
+                    <label for="startend">Introduzca Año/Hasta</label>
+                    <input type="text" class="form-control" id="startend" name="startend" [(ngModel)]="education.startend" placeholder="education.startend" required>
+                </div>
+                <div class="form-group">
+                    <label for="descrip">Introduzca título</label>
+                    <input type="text" class="form-control" id="descrip" name="descrip" [(ngModel)]="education.descrip" placeholder="education.descrip" required>
+                </div>
+                <div class="form-group">
+                    <label for="link">Introduza link foto</label>
+                    <input type="link" class="form-control" id="link" name="link" [(ngModel)]="education.link" placeholder="education.link" required>
+                </div>
+                <button class="btn btn-primary btn-sm" (click)="update()" >Guardar Cambios</button>
+                <button class="btn btn-secondary btn-sm me-md-2" (click)="canceled()">Cancelar</button>
+            </form>
+        </div>
+    </div>
+</div>

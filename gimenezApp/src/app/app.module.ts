@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { interceptorProvider } from './service/interceptor-service';
 import { CommonModule } from '@angular/common';
+import { EditEducationComponent } from './components/education/edit-education.component';
 
 
 
@@ -36,6 +37,7 @@ import { CommonModule } from '@angular/common';
     ErrorComponent,
     ProyectComponent,
     SkillComponent,
+    EditEducationComponent,
 
     
   ],
