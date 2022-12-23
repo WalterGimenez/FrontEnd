@@ -3,9 +3,6 @@
     <h1>Hard & Soft Skills</h1>
     </div>
     <div class="col-sm-1 col-md-1 col-lg-1" id="pencil4">
-      <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal-Skill" id="pencil-pencil" *ngIf="isLoggedIn"><i class="bi bi-pencil-fill"></i></button>
-    </div>
-    <div class="col-sm-1 col-md-1 col-lg-1" id="pencil4">
       <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal-Nueva-Skill" id="pencil-pencil" *ngIf="isLoggedIn"><i class="bi bi-plus-lg"  width="75" height="75"></i></button> 
     </div>
     <div class="col-sm-1 col-md-1 col-lg-1" id="pencil4">
@@ -18,7 +15,7 @@
           <div class="rating-progress-bars p-2">
             
               <div class="progress-1 align-items-center">
-                  <p>{{hardsoft.name}}</p> 
+                  <p>{{hardsoft.name}} <button class="btn btn-light" name="boted" routerLink="/hsed/{{hardsoft.id}}" id="pencil-pencil" *ngIf="isLoggedIn"><i class="bi bi-pencil-fill"></i></button></p> 
                   <div class="progress">
                     
                     <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 10%"[ngStyle]="{'width.%':hardsoft.perc}"   aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">{{hardsoft.perc}}</div>
@@ -32,32 +29,7 @@
 
 </div>
 
-<!-- Modal-Skill--> 
 
-<div class="modal fade" id="modal-Skill" tabindex="-1" aria-labelledby="modalSkill" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="modalLabel">Editar Skill</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="mb-3">
-          <label for="recipient-link" class="col-form-label">Introduzca </label>
-          <input type="text" class="form-control" id="text-nombre-s" placeholder="Nombre del skill">
-        </div>
-        <div class="mb-3">
-          <label for="recipient-link" class="col-form-label">Introduzca</label>
-          <input type="text" class="form-control" id="text-porcent-s" placeholder="% (en número)">
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary btn-sm">Grabar cambios</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- Modal-Skill-Nueva--> 
 
@@ -65,23 +37,22 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="modalLabel">Nueva Skill</h1>
+        <h1 class="modal-title fs-5" id="modalLabel">Agregar Nueva Experiencia</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <div class="mb-3">
-          <label for="recipient-link" class="col-form-label">Introduzca </label>
-          <input type="text" class="form-control" id="text-nombre-s" placeholder="Nombre del skill">
-        </div>
-        <div class="mb-3">
-          <label for="recipient-link" class="col-form-label">Introduzca</label>
-          <input type="text" class="form-control" id="text-porcent-s" placeholder="% (en número)">
-        </div>
-        
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary btn-sm">Grabar cambios</button>
+        <form (ngSubmit)="create()" novalidate #f="ngForm">
+          <div class="form-group">
+            <label for="nameNew">Introduza Nombre Skill</label>
+            <input type="text" class="form-control" id="nameNew" name="nameNew" [(ngModel)] = "nameNew" required>
+          </div>
+          <div class="form-group">
+            <label for="percNew">Introduza % (en número)</label>
+            <input type="number" class="form-control" id="percNew" name="percNew" [(ngModel)] = "percNew" required>
+          </div>
+          <button type="button" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary btn-sm" (click)="create()" data-bs-dismiss="modal">Guardar</button>
+        </form>
       </div>
     </div>
   </div>
@@ -92,20 +63,27 @@
 <div class="modal fade" id="modal-Skill-borra" tabindex="-1" aria-labelledby="general" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="modalLabel">Borrar Skill</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="mb-3">
-          <label for="recipient-link" class="col-form-label">¿Está seguro de borrar el ítem Skill?</label>
+      <ul>
+        <li *ngFor="let hardsoft of hardsoft">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modalLabel">Borrar Experiencia</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
           
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary btn-sm">Borrar</button>
-      </div>
+            <div class="mb-3">
+              <label for="recipient-link" class="col-form-label">{{hardsoft.name}}</label>
+            </div>
+            <div class="mb-3">
+              <label for="recipient-link" class="col-form-label">{{hardsoft.perc}}</label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary btn-sm" (click)="delete(hardsoft.id)" data-bs-dismiss="modal">Borrar</button>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
