@@ -2,9 +2,7 @@
   <div class= "col-sm-9 col-md-9 col-lg-9">
     <h1>Proyectos</h1>
     </div>
-    <div class="col-sm-1 col-md-1 col-lg-1" id="pencil4">
-      <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal-Proyect" id="pencil-pencil" *ngIf="isLoggedIn"><i class="bi bi-pencil-fill"></i></button>
-    </div>
+  
     <div class="col-sm-1 col-md-1 col-lg-1" id="pencil4">
       <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal-Nuevo-Proyect" id="pencil-pencil" *ngIf="isLoggedIn"><i class="bi bi-plus-lg"  width="75" height="75"></i></button> 
     </div>
@@ -20,7 +18,7 @@
                 <a href="{{proyect.linkproy}}" target="_blank"><img src="{{proyect.link}}" alt="foto calculadora" id="calcu"></a>
               </div>
               <div class="card-body">
-                <h3 class="card-title" id="h4edu">{{proyect.name}}</h3>
+                <h3 class="card-title" id="h4edu">{{proyect.name}}  <button class="btn btn-light" name="boted" routerLink="/proyed/{{proyect.id}}" id="pencil-pencil" *ngIf="isLoggedIn"><i class="bi bi-pencil-fill"></i></button></h3>
                   <p class="card-text">{{proyect.descrip}}</p>
               </div>
           </div>
@@ -30,37 +28,6 @@
     
 </div>
 
-<!-- Modal-Proyecto--> 
-
-<div class="modal fade" id="modal-Proyect" tabindex="-1" aria-labelledby="modalProy" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="modalLabel">Editar Proyecto</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="mb-3">
-          <label for="recipient-link" class="col-form-label">Introduzca url</label>
-          <input type="url" class="form-control" id="text-link-educa" placeholder="url de la foto">
-        </div>
-        <div class="mb-3">
-          <label for="recipient-link" class="col-form-label">Introduzca</label>
-          <input type="text" class="form-control" id="text-intitucion" placeholder="Nombre Proyecto">
-        </div>
-        <div class="mb-3">
-          <label for="recipient-link" class="col-form-label">Introduzca</label>
-          <input type="text" class="form-control" id="text-titulo" placeholder="Comentario de que se trata">
-        </div>
-        
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary btn-sm">Grabar cambios</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- Modal-Proyecto-Nuevo--> 
 
@@ -72,23 +39,27 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <div class="mb-3">
-          <label for="recipient-link" class="col-form-label">Introduzca url</label>
-          <input type="url" class="form-control" id="text-link-educa" placeholder="url de la foto)">
-        </div>
-        <div class="mb-3">
-          <label for="recipient-link" class="col-form-label">Introduzca</label>
-          <input type="text" class="form-control" id="text-intitucion" placeholder="Nombre Proyecto">
-        </div>
-        <div class="mb-3">
-          <label for="recipient-link" class="col-form-label">Introduzca</label>
-          <input type="text" class="form-control" id="text-titulo" placeholder="Comentario de que se trata">
-        </div>
+        <form (ngSubmit)="create()" novalidate #f="ngForm">
+          <div class="form-group">
+            <label for="linkNew">Introduza link foto proyecto</label>
+            <input type="url" class="form-control" id="linkNew" name="linkNew" [(ngModel)] = "linkNew" required>
+          </div>
+          <div class="form-group">
+            <label for="nameNew">Introduza Nombre</label>
+            <input type="text" class="form-control" id="nameNew" name="nameNew" [(ngModel)] = "nameNew" required>
+          </div>
+          <div class="form-group">
+            <label for="descripNew">Introduza descripción</label>
+            <input type="text" class="form-control" id="descripNew" name="descripNew" [(ngModel)] = "descripNew" required>
+          </div>
+          <div class="form-group">
+            <label for="linkproyNew">Introduza link de Github</label>
+            <input type="url" class="form-control" id="linkproyNew" name="linkproyNew" [(ngModel)] = "linkproyNew" required>
+          </div>
+          <button type="button" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary btn-sm" (click)="create()" data-bs-dismiss="modal">Crear</button>
+        </form>
         
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary btn-sm">Grabar cambios</button>
       </div>
     </div>
   </div>
@@ -99,20 +70,33 @@
 <div class="modal fade" id="modal-Proyect-borra" tabindex="-1" aria-labelledby="general" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="modalLabel">Borrar Proyecto</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="mb-3">
-          <label for="recipient-link" class="col-form-label">¿Está seguro de borrar el ítem Proyecto?</label>
+      <ul>
+        <li *ngFor="let proyect of proyect">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modalLabel">Borrar Proyecto</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
           
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary btn-sm">Borrar</button>
-      </div>
+            <div class="mb-3">
+              <label for="recipient-link" class="col-form-label">{{proyect.link}}</label>
+            </div>
+            <div class="mb-3">
+              <label for="recipient-link" class="col-form-label">{{proyect.name}}</label>
+            </div>
+            <div class="mb-3">
+              <label for="recipient-link" class="col-form-label">{{proyect.descrip}}</label>
+            </div>
+            <div class="mb-3">
+              <label for="recipient-link" class="col-form-label">{{proyect.linkproy}}</label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary btn-sm" (click)="delete(proyect.id)" data-bs-dismiss="modal">Borrar</button>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </div>

@@ -1,1 +1,29 @@
-<p>edit-proyect works!</p>
+<h2>Editar Experiencia</h2>
+<div class="container" *ngIf="proyect">
+
+    <div class="row">
+        <div>
+            <form (ngSubmit)="update()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="link">Introduza link foto proyecto</label>
+                    <input type="url" class="form-control" id="link" name="link" [(ngModel)]="proyect.link" placeholder="proyect.link" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Introduzca Nombre</label>
+                    <input type="text" class="form-control" id="name" name="name" [(ngModel)]="proyect.name" placeholder="proyect.name" required>
+                </div>
+                <div class="form-group">
+                    <label for="descrip">Introduzca descripción</label>
+                    <input type="text" class="form-control" id="descrip" name="descrip" [(ngModel)]="proyect.descrip" placeholder="proyect.descrip" required>
+                </div>
+                <div class="form-group">
+                    <label for="linkproy">Introduza link de Github</label>
+                    <input type="url" class="form-control" id="linkproy" name="linkproy" [(ngModel)]="proyect.linkproy" placeholder="proyect.proy" required>
+                </div>
+                <button class="btn btn-primary btn-sm" (click)="update()" >Guardar Cambios</button>
+                <button class="btn btn-secondary btn-sm me-md-2" (click)="canceled()">Cancelar</button>
+            </form>
+        </div>
+    </div>
+</div>
+

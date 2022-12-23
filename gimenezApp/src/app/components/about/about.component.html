@@ -35,9 +35,6 @@
           
           <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal-acerca" id="pencil-pencil4" *ngIf="isLoggedIn"><i class="bi bi-pencil-fill"  width="75" height="75"></i></button>
         </div>
-        <div class="col-sm-1 col-md-1 col-lg-1" id="pencil4">
-          <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal-acerca-borrar" id="pencil-pencil4" *ngIf="isLoggedIn"><i class="bi bi-x-lg"></i></button>
-        </div>
         <div class= "col-sm-12 col-md-12 col-lg-12">
           <p class="acerca">
             {{persona.about1}}<br>
@@ -153,29 +150,6 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal">Cancelar</button>
         <button type="button" class="btn btn-primary btn-sm">Guardar Cambios</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal-Acerca-Borrar--> 
-
-<div class="modal fade" id="modal-acerca-borrar" tabindex="-1" aria-labelledby="general" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="modalLabel">Borrar Acerca de</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="mb-3">
-          <label for="recipient-link" class="col-form-label">¿Está seguro de borrar el ítem Acerca de?</label>
-          
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary btn-sm">Borrar</button>
       </div>
     </div>
   </div>
