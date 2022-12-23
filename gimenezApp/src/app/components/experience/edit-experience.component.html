@@ -1,0 +1,33 @@
+<h2>Editar Experiencia</h2>
+<div class="container" *ngIf="experience">
+
+    <div class="row">
+        <div>
+            <form (ngSubmit)="update()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="name">Introduza Empresa</label>
+                    <input type="text" class="form-control" id="name" name="name" [(ngModel)]="experience.name" placeholder="experience.name" required>
+                </div>
+                <div class="form-group">
+                    <label for="startend">Introduzca Año/Hasta</label>
+                    <input type="text" class="form-control" id="startend" name="startend" [(ngModel)]="experience.startend" placeholder="experience.startend" required>
+                </div>
+                <div class="form-group">
+                    <label for="descrip">Introduzca link foto</label>
+                    <input type="text" class="form-control" id="link" name="link" [(ngModel)]="experience.link" placeholder="experience.link" required>
+                </div>
+                <div class="form-group">
+                    <label for="link">Introduza Puesto</label>
+                    <input type="link" class="form-control" id="job" name="job" [(ngModel)]="experience.job" placeholder="experience.job" required>
+                </div>
+                <div class="form-group">
+                    <label for="link">Introduza descrición del Puesto</label>
+                    <input type="url" class="form-control" id="descrip" name="descrip" [(ngModel)]="experience.descrip" placeholder="experience.descrip" required>
+                </div>
+                <button class="btn btn-primary btn-sm" (click)="update()" >Guardar Cambios</button>
+                <button class="btn btn-secondary btn-sm me-md-2" (click)="canceled()">Cancelar</button>
+            </form>
+        </div>
+    </div>
+</div>
+

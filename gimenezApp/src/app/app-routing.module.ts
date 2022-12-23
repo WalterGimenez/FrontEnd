@@ -1,3 +1,4 @@
+import { EditExperienceComponent } from './components/experience/edit-experience.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EditEducationComponent } from './components/education/edit-education.component';
@@ -7,6 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 const routes: Routes = [
   {path: "", component: HomeComponent, pathMatch: 'full'},
   {path: "edited/:id", component : EditEducationComponent, pathMatch: 'full'},
+  {path: "exped/:id", component : EditExperienceComponent, pathMatch: 'full'},
   {path: "**", component: ErrorComponent, pathMatch: 'full'} 
 ];
 

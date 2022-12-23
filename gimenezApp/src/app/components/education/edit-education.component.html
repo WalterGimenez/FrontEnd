@@ -18,7 +18,7 @@
                 </div>
                 <div class="form-group">
                     <label for="link">Introduza link foto</label>
-                    <input type="link" class="form-control" id="link" name="link" [(ngModel)]="education.link" placeholder="education.link" required>
+                    <input type="url" class="form-control" id="link" name="link" [(ngModel)]="education.link" placeholder="education.link" required>
                 </div>
                 <button class="btn btn-primary btn-sm" (click)="update()" >Guardar Cambios</button>
                 <button class="btn btn-secondary btn-sm me-md-2" (click)="canceled()">Cancelar</button>

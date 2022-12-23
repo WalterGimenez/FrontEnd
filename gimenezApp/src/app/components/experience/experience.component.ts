@@ -12,6 +12,12 @@ export class ExperienceComponent implements OnInit {
   isLoggedIn = false;
   experience: experience[] = [];
 
+  nameNew : string;
+  startendNew : string;
+  linkNew : string;
+  jobNew : string;
+  descripNew : string;
+
   constructor(private logginService : LoggedService, private serviceExperience : ExperienceService) { }
 
   ngOnInit(): void {
@@ -26,5 +32,27 @@ export class ExperienceComponent implements OnInit {
     )
   }
 
-  
+  create(): void{
+    const newEdu = new experience(this.nameNew,this.startendNew,this.linkNew,this.jobNew,this.descripNew);
+    this.serviceExperience.save(newEdu).subscribe(data => {
+      this.loadExperience();
+      alert("Experiencia agregada");
+      
+    },err =>{
+      alert("No se pudo crear");
+    }
+    )
+  }
+
+  delete(id?: number){
+    if(id !=undefined){
+      this.serviceExperience.delete(id).subscribe(
+        data => { this.loadExperience();
+        }, err =>{
+          alert("No se eliminó")
+        }
+        
+      )
+    }
+  }
 }
