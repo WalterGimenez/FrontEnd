@@ -20,6 +20,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { interceptorProvider } from './service/interceptor-service';
 import { CommonModule } from '@angular/common';
 import { EditEducationComponent } from './components/education/edit-education.component';
+import { EditExperienceComponent } from './components/experience/edit-experience.component';
+import { EditProyectComponent } from './components/proyect/edit-proyect.component';
+import { EditSkillComponent } from './components/skill/edit-skill.component';
 
 
 
@@ -38,6 +41,9 @@ import { EditEducationComponent } from './components/education/edit-education.co
     ProyectComponent,
     SkillComponent,
     EditEducationComponent,
+    EditExperienceComponent,
+    EditProyectComponent,
+    EditSkillComponent,
 
     
   ],

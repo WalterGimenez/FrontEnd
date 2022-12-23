@@ -2,9 +2,7 @@
       <div class= "col-sm-9 col-md-9 col-lg-9">
         <h1>Experiencia Profesional</h1>
       </div>
-      <div class="col-sm-1 col-md-1 col-lg-1" id="pencil4">
-        <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal-Expe" id="pencil-pencil" *ngIf="isLoggedIn"><i class="bi bi-pencil-fill"></i></button>
-      </div>
+    
       <div class="col-sm-1 col-md-1 col-lg-1" id="pencil4">
         <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal-Nueva-Expe" id="pencil-pencil" *ngIf="isLoggedIn"><i class="bi bi-plus-lg"  width="75" height="75"></i></button> 
       </div>
@@ -20,7 +18,7 @@
               </div>
                         
               <div class="card-body">
-                    <h2 class="card-title" id="h4edu">{{experience.name}} <h2 id="h3edu">{{experience.startend}}</h2></h2>
+                    <h2 class="card-title" id="h4edu">{{experience.name}} <h2 id="h3edu">{{experience.startend}} <button class="btn btn-light" name="boted" routerLink="/exped/{{experience.id}}" id="pencil-pencil" *ngIf="isLoggedIn"><i class="bi bi-pencil-fill"></i></button></h2></h2>
                     <h5>{{experience.job}}</h5>
                     <p class="card-text">{{experience.descrip}}</p>
               </div>
@@ -31,41 +29,6 @@
 
 </div>
 
-<!-- Modal-Experiencia--> 
-
-<div class="modal fade" id="modal-Expe" tabindex="-1" aria-labelledby="modalExpe" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="modalLabel">Editar Experiencia</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="mb-3">
-          <label for="recipient-link" class="col-form-label">Introduzca url</label>
-          <input type="url" class="form-control" id="text-link-educ" placeholder="url de la foto)">
-        </div>
-        <div class="mb-3">
-          <label for="recipient-link" class="col-form-label">Introduzca Institución</label>
-          <input type="text" class="form-control" id="text-institucion" placeholder="Nombre Institución">
-        </div>
-        <div class="mb-3">
-          <label for="recipient-link" class="col-form-label">Introduzca Año</label>
-          <input type="text" class="form-control" id="text-desde" placeholder="Desde/Hasta">
-        </div>
-        <div class="mb-3">
-          <label for="recipient-link" class="col-form-label">Introduzca Puesto</label>
-          <input type="text" class="form-control" id="text-puesto" placeholder="Puesto">
-        </div>
-        
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary btn-sm">Grabar cambios</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- Modal-Experiencia-Nueva--> 
 
@@ -73,31 +36,58 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="modalLabel">Nueva Experiencia</h1>
+        <h1 class="modal-title fs-5" id="modalLabel">Agregar Nueva Experiencia</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <div class="mb-3">
-          <label for="recipient-link" class="col-form-label">Introduzca url</label>
-          <input type="url" class="form-control" id="text-link-educ" placeholder="url de la foto)">
-        </div>
-        <div class="mb-3">
+        <form (ngSubmit)="create()" novalidate #f="ngForm">
+          <div class="form-group">
+            <label for="nameNew">Introduza Empresa</label>
+            <input type="url" class="form-control" id="nameNew" name="nameNew" [(ngModel)] = "nameNew" required>
+          </div>
+          <div class="form-group">
+            <label for="startendNew">Introduza Año/Hasta</label>
+            <input type="text" class="form-control" id="startendNew" name="startendNew" [(ngModel)] = "startendNew" required>
+          </div>
+          <div class="form-group">
+            <label for="linkNew">Introduza link foto</label>
+            <input type="url" class="form-control" id="linkNew" name="linkNew" [(ngModel)] = "linkNew" required>
+          </div>
+          <div class="form-group">
+            <label for="jobNew">Introduza Puesto</label>
+            <input type="text" class="form-control" id="jobNew" name="jobNew" [(ngModel)] = "jobNew" required>
+          </div>
+          <div class="form-group">
+            <label for="descripNew">Introduza descripción Puesto</label>
+            <input type="text" class="form-control" id="descripNew" name="descripNew" [(ngModel)] = "descripNew" required>
+          </div>
+          <button type="button" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary btn-sm" (click)="create()" data-bs-dismiss="modal">Guardar</button>
+        </form>
+       <!-- <div class="mb-3">
           <label for="recipient-link" class="col-form-label">Introduzca Institución</label>
-          <input type="text" class="form-control" id="text-institucion" placeholder="Nombre Institución">
+          <input type="text" class="form-control" id="nameNew" name="nameNew" [(ngModel)] = "nameNew" required>
         </div>
         <div class="mb-3">
           <label for="recipient-link" class="col-form-label">Introduzca Año</label>
-          <input type="text" class="form-control" id="text-desde" placeholder="Desde/Hasta">
+          <input type="text" class="form-control"  id="startendNew" name="startendNew" [(ngModel)] = "startendNew" required>
+        </div>
+        <div class="mb-3">
+          <label for="recipient-link" class="col-form-label">Introduzca link foto</label>
+          <input type="text" class="form-control" id="linkNew" name="linkNew" [(ngModel)] = "linkNew" required>
         </div>
         <div class="mb-3">
           <label for="recipient-link" class="col-form-label">Introduzca Puesto</label>
-          <input type="text" class="form-control" id="text-puesto" placeholder="Puesto">
+          <input type="text" class="form-control" id="jobNew" name="jobNew" [(ngModel)] = "jobNew" required>
         </div>
-        
+        <div class="mb-3">
+          <label for="recipient-link" class="col-form-label">Introduzca descripción del Puesto</label>
+          <input type="text" class="form-control"  id="descripNew" name="descripNew" [(ngModel)] = "descripNew" required>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary btn-sm">Grabar cambios</button>
+        <button type="button" class="btn btn-primary btn-sm" (click)="create()" data-bs-dismiss="modal">Guardar</button>-->
       </div>
     </div>
   </div>
@@ -108,7 +98,38 @@
 <div class="modal fade" id="modal-Expe-borra" tabindex="-1" aria-labelledby="general" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
+      <ul>
+        <li *ngFor="let experience of experience">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modalLabel">Borrar Experiencia</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+          
+            <div class="mb-3">
+              <label for="recipient-link" class="col-form-label">{{experience.name}}</label>
+            </div>
+            <div class="mb-3">
+              <label for="recipient-link" class="col-form-label">{{experience.startend}}</label>
+            </div>
+            <div class="mb-3">
+              <label for="recipient-link" class="col-form-label">{{experience.link}}</label>
+            </div>
+            <div class="mb-3">
+              <label for="recipient-link" class="col-form-label">{{experience.job}}</label>
+            </div>
+            <div class="mb-3">
+              <label for="recipient-link" class="col-form-label">{{experience.descrip}}</label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary btn-sm" (click)="delete(experience.id)" data-bs-dismiss="modal">Borrar</button>
+          </div>
+        </li>
+      </ul>
+
+      <!-- <div class="modal-header">
         <h1 class="modal-title fs-5" id="modalLabel">Borrar Eperiencia</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
@@ -121,7 +142,7 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal">Cancelar</button>
         <button type="button" class="btn btn-primary btn-sm">Borrar</button>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
