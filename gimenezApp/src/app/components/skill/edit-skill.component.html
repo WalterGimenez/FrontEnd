@@ -1,1 +1,20 @@
-<p>edit-skill works!</p>
+<h2>Editar Experiencia</h2>
+<div class="container" *ngIf="hardsoft">
+
+    <div class="row">
+        <div>
+            <form (ngSubmit)="update()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="name">Introduza Nombre Skill</label>
+                    <input type="text" class="form-control" id="name" name="name" [(ngModel)]="hardsoft.name" placeholder="hardsoft.name" required>
+                </div>
+                <div class="form-group">
+                    <label for="perc">Introduzca % (en número)</label>
+                    <input type="number" class="form-control" id="perc" name="perc" [(ngModel)]="hardsoft.perc" placeholder="hardsoft.perc" required>
+                </div>
+                <button class="btn btn-primary btn-sm" (click)="update()" >Guardar Cambios</button>
+                <button class="btn btn-secondary btn-sm me-md-2" (click)="canceled()">Cancelar</button>
+            </form>
+        </div>
+    </div>
+</div>
