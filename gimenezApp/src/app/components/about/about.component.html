@@ -5,9 +5,7 @@
   <div class="col-sm-2 col-md-2 col-lg-2">
     <img src="{{persona.link}}" class="img-fluid" alt="foto Gimenez" id="gim">
   </div>
-<!--Modal Foto -->
-  <div class="col-sm-1 col-md-1 col-lg-1" id="pencil">
-    <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal-foto" id="pencil-pencil" *ngIf="isLoggedIn" ><i class="bi bi-pencil-fill"></i></button>
+
   </div>
 
 
@@ -15,25 +13,17 @@
       <div class="col-sm-4 col-md-4 col-lg-4">
         <h1 id = "name" >{{persona.name}} {{persona.lastname}}</h1>
       </div>
-      <div class="col-sm-1 col-md-1 col-lg-1" id="pencil2">
-        <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal-n-a" id="pencil-pencil2" *ngIf="isLoggedIn"><i class="bi bi-pencil-fill"></i></button>
-      </div>
+      
 </div>
 <div class="row">    
       <div class="col-sm-3 col-md-3 col-lg-3">
           <h5>{{persona.tit1}}<br>{{persona.tit2}}</h5>
       </div>
-      <div class="col-sm-1 col-md-1 col-lg-1" id="pencil3">
-        <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal-gen" id="pencil-pencil3" *ngIf="isLoggedIn"><i class="bi bi-pencil-fill"></i></button>
-      </div>
+    
 </div>
 <div class="row">        
       <div class= "col-sm-10 col-md-10 col-lg-10">
         <h3 id="acerca">Acerca de</h3>
-        </div>
-        <div class="col-sm-1 col-md-1 col-lg-1" id="pencil4">
-          
-          <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modal-acerca" id="pencil-pencil4" *ngIf="isLoggedIn"><i class="bi bi-pencil-fill"  width="75" height="75"></i></button>
         </div>
         <div class= "col-sm-12 col-md-12 col-lg-12">
           <p class="acerca">
@@ -42,117 +32,4 @@
           </p>
         </div>
 </div>
-
-
-<!-- Modal-Foto--> 
-
-
-<div class="modal fade" id="modal-foto" tabindex="-1" aria-labelledby="cambioFoto" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="modalLabel">Editar Foto</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="mb-3">
-          <label for="imgPerfil" class="col-form-label">Introduzca</label>
-          <input type="url" class="form-control" id="imgPerfil" placeholder="url de la foto" name="imgPerfil" required>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal">Cancelar</button>
-        <button type="submit" class="btn btn-primary btn-sm">Grabar cambios</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-<!-- Modal-Nombre-Y-Apellido--> 
-
-<div class="modal fade" id="modal-n-a" tabindex="-1" aria-labelledby="nombreyApe" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="modalLabel">Editar Nombre y Apellido</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="mb-3">
-          <label for="recipient-link" class="col-form-label">Introduzca</label>
-          <input type="text" class="form-control" id="text-nombre" placeholder="Nombre">
-        </div>
-        <div class="mb-3">
-          <label for="recipient-link" class="col-form-label">Introduzca</label>
-          <input type="text" class="form-control" id="text-apellido" placeholder="Apellido">
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary btn-sm">Grabar cambios</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal-General--> 
-
-<div class="modal fade" id="modal-gen" tabindex="-1" aria-labelledby="general" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="modalLabel">Datos</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="mb-3">
-          <label for="recipient-link" class="col-form-label">Introduzca</label>
-          <input type="text" class="form-control" id="text-dato1" placeholder="Dato 1">
-        </div>
-
-        <div class="mb-3">
-          <label for="recipient-link" class="col-form-label">Introduzca</label>
-          <input type="text" class="form-control" id="text-dato2" placeholder="Dato 2">
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary btn-sm">Grabar cambios</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal-Acerca--> 
-
-<div class="modal fade" id="modal-acerca" tabindex="-1" aria-labelledby="general" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="modalLabel">Edición Acerca de</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="mb-3">
-          <label for="recipient-link" class="col-form-label">Datos 1</label>
-          <input type="text" class="form-control" id="text-dato1-acerca" placeholder="Acerca de (dato 1)">
-        </div>
-
-        <div class="mb-3">
-          <label for="recipient-link" class="col-form-label">Datos 2</label>
-          <input type="text" class="form-control" id="text-dato2-acerca" placeholder="Acerca de (dato 2)">
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btn-sm me-md-2" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary btn-sm">Guardar Cambios</button>
-      </div>
-    </div>
-  </div>
-</div>
-
 
