@@ -8,7 +8,9 @@ import { education } from '../model/education.model';
 })
 export class EducationService {
 
-  URL = 'http://localhost:8080/education'
+  /*URL = 'http://localhost:8080/education';*/
+  URL = 'https://wg-app.onrender.com/education';
+
 
   constructor(private httpClient : HttpClient) { }
 
