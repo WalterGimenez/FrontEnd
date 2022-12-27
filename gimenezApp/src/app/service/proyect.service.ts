@@ -7,7 +7,9 @@ import { proyect } from '../model/proyect.model';
   providedIn: 'root'
 })
 export class ProyectService {
-  URL = 'http://localhost:8080/proyect'
+  /*URL = 'http://localhost:8080/proyect';*/
+  URL = 'https://wg-app.onrender.com/proyect';
+
 
   constructor(private httpClient : HttpClient) {}
 
