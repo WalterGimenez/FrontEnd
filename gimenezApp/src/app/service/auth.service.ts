@@ -9,8 +9,8 @@ import { JwtDto } from '../model/jwt-dto';
   providedIn: 'root'
 })
 export class AuthService {
-  /*URL ='http://localhost:8080/auth/';*/
-  URL ='https://wg-app.onrender.com/auth/';  
+  /*URL2 ='http://localhost:8080/auth/';*/
+  URL ='https://walter-waltergimenez.koyeb.app/auth/';  
 
   constructor(private httpClient : HttpClient) { }
 

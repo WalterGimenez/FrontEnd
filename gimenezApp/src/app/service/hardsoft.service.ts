@@ -7,8 +7,8 @@ import { hardsoft } from '../model/hardsoft.model';
   providedIn: 'root'
 })
 export class HardSoftService {
-  /*URL = 'http://localhost:8080/hys';*/
-  URL = 'https://wg-app.onrender.com/hys';
+  /*URL2 = 'http://localhost:8080/hys';*/
+  URL = 'https://walter-waltergimenez.koyeb.app/hys';
 
   constructor(private httpClient : HttpClient) {}
 
