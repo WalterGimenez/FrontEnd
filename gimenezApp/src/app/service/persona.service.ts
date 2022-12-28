@@ -8,7 +8,7 @@ import { persona } from '../model/persona.model';
 })
 export class PersonaService {
   /*URL = 'http://localhost:8080/personas/';*/
-  URL = 'https://localhost:8000/walter-waltergimenez.koyeb.app/personas/';
+  URL = 'https://walter-waltergimenez.koyeb.app/personas/';
 
   constructor(private http: HttpClient) { }
 

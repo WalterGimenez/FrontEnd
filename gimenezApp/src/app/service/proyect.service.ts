@@ -8,7 +8,7 @@ import { proyect } from '../model/proyect.model';
 })
 export class ProyectService {
   /*URL = 'http://localhost:8080/proyect';*/
-  URL = 'https://localhost:8000/walter-waltergimenez.koyeb.app/proyect';
+  URL = 'https://walter-waltergimenez.koyeb.app/proyect';
 
 
   constructor(private httpClient : HttpClient) {}
