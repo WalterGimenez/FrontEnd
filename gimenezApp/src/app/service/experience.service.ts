@@ -8,7 +8,7 @@ import { experience } from '../model/experience.model';
 })
 export class ExperienceService {
   /*URL = 'http://localhost:8080/exper';*/
-  URL = 'https://wg-app.onrender.com/exper';
+  URL = 'https://walter-waltergimenez.koyeb.app/exper';
 
   constructor(private httpClient : HttpClient) { }
 
