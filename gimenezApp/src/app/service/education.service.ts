@@ -9,7 +9,7 @@ import { education } from '../model/education.model';
 export class EducationService {
 
   /*URL = 'http://localhost:8080/education';*/
-  URL = 'https://walter-waltergimenez.koyeb.app/education';
+  URL = 'https://localhost:8000/walter-waltergimenez.koyeb.app/education';
 
 
   constructor(private httpClient : HttpClient) { }
