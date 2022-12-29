@@ -7,8 +7,9 @@ import { hardsoft } from '../model/hardsoft.model';
   providedIn: 'root'
 })
 export class HardSoftService {
-  /*URL2 = 'http://localhost:8080/hys';*/
-  URL = 'https://walter-waltergimenez.koyeb.app/hys';
+  /*URL2 = 'http://localhost:8080/hys';
+  URL = 'https://walter-waltergimenez.koyeb.app/hys';*/
+  URL = 'https://wgimenez.onrender.com/hys';
 
   constructor(private httpClient : HttpClient) {}
 

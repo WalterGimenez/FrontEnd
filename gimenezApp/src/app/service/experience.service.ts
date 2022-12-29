@@ -7,8 +7,9 @@ import { experience } from '../model/experience.model';
   providedIn: 'root'
 })
 export class ExperienceService {
-  /*URL2 = 'http://localhost:8080/exper';*/
-  URL = 'https://walter-waltergimenez.koyeb.app/exper';
+  /*URL2 = 'http://localhost:8080/exper';
+  URL = 'https://walter-waltergimenez.koyeb.app/exper';*/
+  URL = 'https://wgimenez.onrender.com/exper';
 
   constructor(private httpClient : HttpClient) { }
 
