@@ -9,9 +9,9 @@ import { JwtDto } from '../model/jwt-dto';
   providedIn: 'root'
 })
 export class AuthService {
-  /*URL2 ='http://localhost:8080/auth/';*/
-  URL ='https://walter-waltergimenez.koyeb.app/auth/';  
-
+  /*URL2 ='http://localhost:8080/auth/';
+  URL ='https://walter-waltergimenez.koyeb.app/auth/';  */
+  URL ='https://wgimenez.onrender.com/auth/'; 
   constructor(private httpClient : HttpClient) { }
 
   public nuevo(userNew : NewUser): Observable<any>{
